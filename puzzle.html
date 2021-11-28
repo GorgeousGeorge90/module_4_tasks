@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        var score = 0;
+
+        function checkAnswer(inputId, answers) {
+            userAnswer = document.getElementById(inputId).value;
+            userAnswer = userAnswer.toLowerCase();
+            for ( var i = 0; i < answers.length; i++ ) {
+                if ( userAnswer == answers[i] ) {
+                    score++
+                    break;
+                };
+            };
+        };
+
+        function checkAnswers() {
+
+            checkAnswer("userAnswer1",["гермес","меркурий"]);
+            checkAnswer("userAnswer2",["афродита", "катюша"]);
+            checkAnswer("userAnswer3",[25,30]);
+
+        alert("У вас : " + score + "  правильных ответов!");
+
+        };
+        
+    </script>
+</head>
+<body>
+    <a href="#">Главная</a>
+    <a href="#">Загадки</a>
+    <a href="#">Угадайка</a>
+
+<h1> Игра в загадки </h1>
+
+<p>Бог скорости в Древней Греции?</p>
+<input type="text" id="userAnswer1">
+
+<p>Богиня красоты  в Древней Греции?</p>
+<input type="text" id="userAnswer2">
+
+<p>Сколько Егору лет?</p>
+<input  type="number" id="userAnswer3">
+
+<br>
+<a href="#" onclick="checkAnswers()">Отправить</a>
+
+<p>
+        <a href="#">Главная</a>
+        <a href="#">Загадки</a>
+        <a href="#">Угадайка</a>
+    </p>
+
+    Copiright &copy; Vasq Pupkin
+
+
+
+    
+</body>
+</html>
